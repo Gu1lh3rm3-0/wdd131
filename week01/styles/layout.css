@@ -1,0 +1,12 @@
+.navigation {
+    width: 100%;
+    display: grid;
+    align-items: center;
+ }
+
+.navigation a {
+    border: 1px solid #bbb;
+    padding: 2rem;
+    text-align: center;
+    grid-column: 1 / 3;
+} 
