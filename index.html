@@ -28,17 +28,33 @@
         <h1>Guilherme Oliveira</h1>
         <section class="card">
             <h2>About Me</h2>
-            <img src="images/profile.jpg" alt="profile">
-            <p>Hello! My name is Guilherme Oliveira, I am from São Paulo, Brasil. Some things that I like to do is to watch soccer, movies play video games and spend some time with my family and friends.</p>
+            <div class="about">
+                <img class="profile" src="images/profile.jpg" alt="Profile Picture">
+                <p>Hello! My name is Guilherme Oliveira, I am from São Paulo, Brasil. Some things that I like to do is to watch soccer, movies play video games and spend some time with my family and friends.</p>
+            </div>
+            <div class="brazil">
+                <figure>
+                    <h3>Brazil</h3>
+                    <img src="images/bandeira-brasil.webp" alt="Brazil Flag">
+                    <figcaption>Flag of Brazil</figcaption>
+                </figure>
+                <p>Brazil, is the largest country in South America and the. Its vast expanse covers incredibly diverse landscapes, from the Amazon Rainforest, to the extensive paradisiacal beaches along its coast</p>
+            </div>
         </section>
         <section class="card">
-            <h2>My country</h2>
-            <img src="images/bandeira-brasil.webp" alt="brazil">
-            <p>Brazil, is the largest country in South America and the fifth largest in the world by land area. Its vast expanse covers incredibly diverse landscapes, from the Amazon Rainforest, the largest green lung on the planet, to the extensive paradisiacal beaches along its coast. But Brazil isn't just about its landscapes. It's the people—a vibrant mix of cultures that have created a unique and lively society. You can see this mix in everything from the food, which is rich and flavorful, to the music, with rhythms like samba that just make you want to dance.</p>
+            <h2>Web Dev Resources</h2>
+            <div class="resources">
+                <ul>
+                    <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                    <li><a href="https://www.codecademy.com/">Code Academy</a></li>
+                    <li><a href="https://fonts.google.com/">Text Fonts</a></li>
+                    <li><a href="https://coolors.co/">Color Palettes</a></li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy;</p><p id="current">Guilherme Oliveira | Brazil</p>
+        <p>&copy;</p><span id="current"></span> Guilherme Oliveira | Brazil</p>
         <p id="last"></p>
     </footer>
 </body>
