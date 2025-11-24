@@ -1,0 +1,146 @@
+:root {
+	--text-family: 'PT Serif', serif;
+	--title-family: 'Roboto', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-family: var(--title-family);
+}
+
+p, a, li, figcaption {
+	font-family: var(--text-family);
+}
+main h1 {
+	display: flex;
+	justify-content: center;
+}
+
+header, main {
+    margin: 0 auto;
+}
+
+header {
+	background-color: #363ABF;
+}
+
+header h1 {
+	color: #fff;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+}
+
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+	font-size: larger;
+}
+
+nav a:hover {
+	text-decoration: underline double;
+	background-color: #eee;
+	color: #000;
+}
+
+
+.temples {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+	gap: 2rem;
+	justify-content: center;
+    margin: 1rem;
+}
+
+.temple1 img, .temple2 img, .temple3 img, .temple4 img, .temple5 img, .temple6 img, .temple7 img, .temple8 img, .temple9 img {
+	width: 200px;
+}
+
+figcaption {
+	text-align: center;
+}
+
+
+#menu {
+	display: block;
+	font-size: 2rem;
+	font-weight:700;
+	text-decoration: none;
+	padding: .5rem .75rem;
+	background-color: #eee;
+	color: #000;
+}
+
+#menu::before {
+	content: "≡";
+}
+
+.navigation {
+	list-style: none;
+	margin: 0 auto;
+	max-width: 760px;
+}
+
+.navigation li {
+	display: none;
+}
+.navigation a {
+	display: block;
+	padding: 0.75rem;
+	text-align: left;
+	text-decoration: none;
+	font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover, navigation a:active {
+	color: white;
+	background-color: black;
+}
+
+.show li {
+	display: block;
+}
+
+#menu.show::before {
+	content: "X";
+}
+
+
+@media only screen and (min-width: 40em) {
+	.navigation {
+		display: flex;
+	}
+	.navigation li {
+		display: block;
+		flex: 1 1 100%;
+	}
+	.navigation a {
+		text-align: center;
+	}
+	#menu {
+		display: none;
+	}
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #363ABF;
+	color: #fff;
+	padding: 1rem;
+	margin-top: 1rem;
+}
