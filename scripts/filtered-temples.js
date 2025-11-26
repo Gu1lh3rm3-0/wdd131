@@ -92,3 +92,40 @@ const temples = [
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/nukualofa-tonga/400x250/nukualofa-tonga-temple-lds-445038-wallpaper.jpg"
     }
 ];
+
+creatCard(temples);
+
+const oldTemplesBtn = document.querySelector("#old-temples");
+
+oldTemplesBtn.addEventListener("click", () => {
+  document.querySelector(".temple-grid").innerHTML = "";
+  creatCard(temples.filter(temple => !temple.dedicated.includes(2000)));
+});
+
+function creatCard(filteredTemples) {
+  document.querySelector(".temple-grid").innerHTML = "";
+  filteredTemples.forEach(temple => {
+    let card = document.createElement("section");
+    let name = document.createElement("h3");
+    let location = document.createElement("p");
+    let dedicated = document.createElement("p");
+    let area = document.createElement("p");
+    let image = document.createElement("img");
+
+    name.textContent = temple.templeName;
+    location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+    dedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+    area.innerHTML = `<span class="label">Area:</span> ${temple.area} sq ft`;
+    image.setAttribute("src", temple.imageUrl);
+    image.setAttribute("alt", `Image of ${temple.templeName} Temple`);
+    image.setAttribute("loading", "lazy");
+
+    card.appendChild(name);
+    card.appendChild(location);
+    card.appendChild(dedicated);
+    card.appendChild(area);
+    card.appendChild(image);
+
+    document.querySelector(".temple-grid").appendChild(card);
+  });
+}
