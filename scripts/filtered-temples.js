@@ -68,12 +68,12 @@ const temples = [
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
   {
-    templeName: "Tokyo Japan",
-    location: "Tokyo, Japan",
-    dedicated: "1980, October, 27",
-    area: 53997,
+    templeName: "Arequipa Peru",
+    location: "Arequipa, Peru",
+    dedicated: "2019, December, 15",
+    area: 26969,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x640/tokyo_japan_temple-evening.jpeg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/arequipa-peru/400x250/4-48661c257177c19a0f39a3991b1a7e7aa0338487.jpeg"
     },
     {
     templeName: "Bern Switzerland",
@@ -99,8 +99,37 @@ const oldTemplesBtn = document.querySelector("#old-temples");
 
 oldTemplesBtn.addEventListener("click", () => {
   document.querySelector(".temple-grid").innerHTML = "";
-  creatCard(temples.filter(temple => !temple.dedicated.includes(2000)));
+  creatCard(temples.filter(temple => temple.dedicated < "1900"));
 });
+
+const newTemplesBtn = document.querySelector("#new-temples");
+
+newTemplesBtn.addEventListener("click", () => {
+  document.querySelector(".temple-grid").innerHTML = "";
+  creatCard(temples.filter(temple => temple.dedicated > "2000"));
+});
+
+const largeTemplesBtn = document.querySelector("#large-temples");
+
+largeTemplesBtn.addEventListener("click", () => {
+  document.querySelector(".temple-grid").innerHTML = "";
+  creatCard(temples.filter(temple => temple.area > 90000));
+});
+
+const smallTemplesBtn = document.querySelector("#small-temples");
+
+smallTemplesBtn.addEventListener("click", () => {
+  document.querySelector(".temple-grid").innerHTML = "";
+  creatCard(temples.filter(temple => temple.area < 10000));
+});
+
+const allTemplesBtn = document.querySelector("#all-temples");
+
+allTemplesBtn.addEventListener("click", () => {
+  document.querySelector(".temple-grid").innerHTML = "";
+  creatCard(temples);
+});
+
 
 function creatCard(filteredTemples) {
   document.querySelector(".temple-grid").innerHTML = "";

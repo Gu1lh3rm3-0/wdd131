@@ -9,11 +9,12 @@
 	box-sizing: border-box;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
 	font-family: var(--title-family);
+	text-align: center;
 }
 
-p, a, li, figcaption {
+p, a, li{
 	font-family: var(--text-family);
 }
 main h1 {
@@ -40,6 +41,7 @@ nav ul {
 }
 
 nav a {
+	font-family: var(--title-family);
 	display: block;
 	color: #fff;
 	text-align: center;
@@ -48,27 +50,10 @@ nav a {
 	font-size: larger;
 }
 
-nav a:hover {
+a:hover {
 	text-decoration: underline double;
 	background-color: #eee;
 	color: #000;
-}
-
-
-.temples {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
-	gap: 2rem;
-	justify-content: center;
-    margin: 1rem;
-}
-
-.temple1 img, .temple2 img, .temple3 img, .temple4 img, .temple5 img, .temple6 img, .temple7 img, .temple8 img, .temple9 img {
-	width: 200px;
-}
-
-figcaption {
-	text-align: center;
 }
 
 
@@ -143,4 +128,24 @@ footer {
 	color: #fff;
 	padding: 1rem;
 	margin-top: 1rem;
+}
+
+.temple-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin: 1rem;
+	justify-items: center;
+}
+
+.temple-grid img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+.temple-grid section {
+	text-align: center;
+	background-color: antiquewhite;
+	border-radius: 8px;
 }
