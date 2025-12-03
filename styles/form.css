@@ -99,3 +99,10 @@ header, footer{
     background-color: antiquewhite;
     margin-bottom: 2rem;
 }
+
+@media screen and (max-width: 600px) {
+  .product-review {
+    padding: 1rem 1rem;
+  }
+  
+}
